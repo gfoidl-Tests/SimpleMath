@@ -1,0 +1,16 @@
+# CI
+.travis.yml
+.codeclimate.yml
+.appveyor.yml
+tests
+
+# TypeScript
+*.js.map
+*.ts
+!*.d.ts
+tsconfig.json
+tslint.json
+tslint.test.json
+
+# Git
+.gitattributes
