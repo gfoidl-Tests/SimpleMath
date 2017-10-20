@@ -21,7 +21,8 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
-      - run: yarn run build
-      - run: yarn run lint
-      - run: yarn run test
+       
+      - run: export CI_BUILD_NUMBER=$CIRCLE_BUILD_NUM
+      - run: export BRANCH_NAME=$CIRCLE_BRANCH
+      - run: chmod ugo+x ./build.sh
+      - run: ./build.sh
