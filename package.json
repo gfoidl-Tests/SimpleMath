@@ -6,7 +6,9 @@
     "types"      : "lib/index.d.ts",
     "author"     : "Günther Foidl <gue@korporal.at>",
     "license"    : "MIT",
-    "scripts": {
+    "repository" : "https://github.com/gfoidl/SimpleMath",
+    "bugs"       : "https://github.com/gfoidl/SimpleMath/issues",
+    "scripts"    : {
         "build"     : "tsc",
         "lint"      : "tslint ./lib/*.ts",
         "test"      : "alsatian tests/**/*.js",
@@ -19,5 +21,9 @@
         "alsatian"  : "^2.0.0",
         "typescript": "^2.5.3",
         "tslint"    : "5.7.0"
+    },
+    "config": {
+        "allow-same-version": true,
+        "git-tag-version"   : false
     }
 }
