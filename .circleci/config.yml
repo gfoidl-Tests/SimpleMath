@@ -19,7 +19,7 @@ jobs:
                     - node_modules
             - run: yarn run build
             - run: yarn run lint
-            - run: yarn run test
+            - run: yarn run test-results
             - persist_to_workspace:
                 root: .
                 paths:
