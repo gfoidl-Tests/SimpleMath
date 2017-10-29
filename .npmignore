@@ -1,7 +1,7 @@
 # CI
-.travis.yml
-.codeclimate.yml
 .appveyor.yml
+.circleci
+.travis.yml
 tests
 
 # TypeScript
@@ -14,3 +14,6 @@ tslint.test.json
 
 # Git
 .gitattributes
+
+# Mics
+yarn.lock

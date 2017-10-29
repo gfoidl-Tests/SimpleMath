@@ -1,6 +1,6 @@
 {
     "name"       : "gfoidl-simplemath",
-    "version"    : "0.2.2",
+    "version"    : "0.2.4",
     "description": "Simple Math-Class",
     "main"       : "lib/index.js",
     "types"      : "lib/index.d.ts",
