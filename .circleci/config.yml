@@ -20,6 +20,10 @@ jobs:
             - run: yarn run build
             - run: yarn run lint
             - run: yarn run test-results
+            - run:
+                name: test with direct output
+                command: yarn run test
+                when: on_fail
             - persist_to_workspace:
                 root: .
                 paths:
