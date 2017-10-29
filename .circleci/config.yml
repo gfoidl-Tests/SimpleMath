@@ -27,6 +27,10 @@ jobs:
                     - ./lib/*.d.ts
                     - ./package.json
                     - ./Readme.md
+            - store_test_results:
+                path: tests
+            - store_artifacts:
+                path: tests/test-results.xml
     deploy:
         <<: *defaults
         steps:

@@ -11,7 +11,7 @@
     "scripts"    : {
         "build"     : "tsc",
         "lint"      : "tslint ./lib/*.ts",
-        "test"      : "alsatian tests/**/*.js",
+        "test"      : "alsatian tests/**/*.js --tap | tap-junit -o tests -n test-results.xml",
         "build-test": "tsc && alsatian tests/**/*.js"
     },
     "dependencies": {
@@ -20,7 +20,8 @@
     "devDependencies": {
         "alsatian"  : "^2.0.0",
         "typescript": "^2.5.3",
-        "tslint"    : "5.7.0"
+        "tslint"    : "5.7.0",
+        "tap-junit" : "1.2.8"
     },
     "config": {
         "allow-same-version": true,
