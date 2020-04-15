@@ -50,11 +50,11 @@ workflows:
                 filters:
                     tags:
                         only: /^v[0-9]\.[0-9]\.[0-9]$/
-            - deploy:
-                requires:
-                    - build_and_test
-                filters:
-                    branches:
-                        ignore: /.*/
-                    tags:
-                        only: /^v[0-9]\.[0-9]\.[0-9]$/
+            #- deploy:
+            #    requires:
+            #        - build_and_test
+            #    filters:
+            #        branches:
+            #            ignore: /.*/
+            #        tags:
+            #            only: /^v[0-9]\.[0-9]\.[0-9]$/
