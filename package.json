@@ -1,28 +1,29 @@
 {
     "name"       : "gfoidl-simplemath",
-    "version"    : "0.3.0",
+    "version"    : "0.4.0",
     "description": "Simple Math-Class",
     "main"       : "lib/index.js",
     "types"      : "lib/index.d.ts",
     "author"     : "Günther Foidl <gue@korporal.at>",
     "license"    : "MIT",
-    "repository" : "https://github.com/gfoidl/SimpleMath",
-    "bugs"       : "https://github.com/gfoidl/SimpleMath/issues",
-    "scripts": {
-        "build"       : "tsc",
+    "repository" : "https://github.com/gfoidl-Tests/SimpleMath",
+    "bugs"       : "https://github.com/gfoidl-Tests/SimpleMath/issues",
+    "scripts"    : {
+        "build"       : "tsc --build",
+        "clean"       : "tsc --build --clean",
         "lint"        : "tslint ./lib/*.ts",
         "test"        : "alsatian tests/**/*.js",
         "test-results": "alsatian tests/**/*.js --tap | tap-junit -o tests -n test-results.xml",
         "build-test"  : "tsc && alsatian tests/**/*.js"
     },
     "dependencies": {
-        "tslib": "1.8.0"
+        "tslib": "^1.11.1"
     },
     "devDependencies": {
-        "alsatian"  : "^2.0.0",
-        "typescript": "^2.5.3",
-        "tslint"    : "5.7.0",
-        "tap-junit" : "1.2.8"
+        "alsatian"  : "^3.2.1",
+        "typescript": "^3.8.3",
+        "tslint"    : "^6.1.1",
+        "tap-junit" : "^3.1.2"
     },
     "config": {
         "allow-same-version": true,

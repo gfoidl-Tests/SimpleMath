@@ -17,3 +17,5 @@ tslint.test.json
 
 # Mics
 yarn.lock
+.editorconfig
+/.vs

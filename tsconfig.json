@@ -1,14 +1,22 @@
 {
     "compilerOptions": {
-        "target"                : "es5",
+        "target"                : "ES6",
         "module"                : "commonjs",
-        "lib"                   : [ "es2015" ],
+        "lib"                   : [ "ES6" ],
         "declaration"           : true,
         "removeComments"        : true,
         "importHelpers"         : true,
-        "strict"                : true,
         "noImplicitAny"         : true,
-        "experimentalDecorators": true
+        "experimentalDecorators": true,
+        "sourceMap"             : true,
+        "incremental"           : true,
+        "newLine"               : "lf",
+
+        "strict"                    : true,
+        "noUnusedLocals"            : true,
+        "noUnusedParameters"        : true,
+        "noImplicitReturns"         : true,
+        "noFallthroughCasesInSwitch": true
     },
     "exclude": [
         "node_modules"
