@@ -1,7 +1,7 @@
 {
-    "name"       : "gfoidl-simplemath",
-    "version"    : "0.4.0",
-    "description": "Simple Math-Class",
+    "name"       : "gfoidl-typescript-ci-test",
+    "version"    : "0.1.0",
+    "description": "Simple Math-Class (for TypeScript CI testing)",
     "main"       : "lib/index.js",
     "types"      : "lib/index.d.ts",
     "author"     : "Günther Foidl <gue@korporal.at>",
