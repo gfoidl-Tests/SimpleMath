@@ -1,6 +1,6 @@
 {
     "name"       : "gfoidl-typescript-ci-test",
-    "version"    : "0.1.0",
+    "version"    : "0.2.0-preview-1",
     "description": "Simple Math-Class (for TypeScript CI testing)",
     "main"       : "lib/index.js",
     "types"      : "lib/index.d.ts",
@@ -9,24 +9,27 @@
     "repository" : "https://github.com/gfoidl-Tests/SimpleMath",
     "bugs"       : "https://github.com/gfoidl-Tests/SimpleMath/issues",
     "scripts"    : {
-        "build"       : "tsc --build",
+        "build"       : "tsc --build --verbose",
         "clean"       : "tsc --build --clean",
-        "lint"        : "tslint ./lib/*.ts",
-        "test"        : "alsatian tests/**/*.js",
-        "test-results": "alsatian tests/**/*.js --tap | tap-junit -o tests -n test-results.xml",
-        "build-test"  : "tsc && alsatian tests/**/*.js"
+        "lint"        : "tslint ./source/*.ts",
+        "test"        : "alsatian out/tests/**/*.js",
+        "test-results": "alsatian out/tests/**/*.js --tap | tap-junit -o out/tests -n test-results.xml"
     },
     "dependencies": {
         "tslib": "^1.11.1"
     },
     "devDependencies": {
-        "alsatian"  : "^3.2.1",
-        "typescript": "^3.8.3",
-        "tslint"    : "^6.1.1",
-        "tap-junit" : "^3.1.2"
+        "alsatian"    : "^3.2.1",
+        "module-alias": "^2.2.2",
+        "typescript"  : "^3.8.3",
+        "tslint"      : "^6.1.1",
+        "tap-junit"   : "^3.1.2"
     },
     "config": {
         "allow-same-version": true,
         "git-tag-version"   : false
+    },
+    "_moduleAliases": {
+        "@source": "lib"
     }
 }

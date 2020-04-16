@@ -32,9 +32,9 @@ jobs:
                     - ./package.json
                     - ./Readme.md
             - store_test_results:
-                path: tests
+                path: out/tests
             - store_artifacts:
-                path: tests/test-results.xml
+                path: out/tests/test-results.xml
     deploy:
         <<: *defaults
         steps:
