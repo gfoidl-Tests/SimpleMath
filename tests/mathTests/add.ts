@@ -1,5 +1,5 @@
-//import { Math } from "../../lib/math";
-import { Math } from "../../lib/index";
+import "module-alias/register";
+import { Math }                          from "@source/index";
 import { TestFixture, TestCase, Expect } from "alsatian";
 //-----------------------------------------------------------------------------
 @TestFixture()

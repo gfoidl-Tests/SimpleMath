@@ -1,11 +1,14 @@
-#NPM
+# NPM
 node_modules
 npm-debug.log*
 
-#TypeScript
+# TypeScript
 *.js
 *.js.map
 *.d.ts
-/tests/*.xml
+
+# Misc
 /.vs
 /tsconfig.tsbuildinfo
+/lib
+/out

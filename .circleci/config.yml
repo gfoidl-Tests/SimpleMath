@@ -32,9 +32,9 @@ jobs:
                     - ./package.json
                     - ./Readme.md
             - store_test_results:
-                path: tests
+                path: out/tests
             - store_artifacts:
-                path: tests/test-results.xml
+                path: out/tests/test-results.xml
     deploy:
         <<: *defaults
         steps:
@@ -50,11 +50,11 @@ workflows:
                 filters:
                     tags:
                         only: /^v[0-9]\.[0-9]\.[0-9]$/
-            - deploy:
-                requires:
-                    - build_and_test
-                filters:
-                    branches:
-                        ignore: /.*/
-                    tags:
-                        only: /^v[0-9]\.[0-9]\.[0-9]$/
+            #- deploy:
+            #    requires:
+            #        - build_and_test
+            #    filters:
+            #        branches:
+            #            ignore: /.*/
+            #        tags:
+            #            only: /^v[0-9]\.[0-9]\.[0-9]$/

@@ -1,24 +1,11 @@
 {
-    "compilerOptions": {
-        "target"                : "ES6",
-        "module"                : "commonjs",
-        "lib"                   : [ "ES6" ],
-        "declaration"           : true,
-        "removeComments"        : true,
-        "importHelpers"         : true,
-        "noImplicitAny"         : true,
-        "experimentalDecorators": true,
-        "sourceMap"             : true,
-        "incremental"           : true,
-        "newLine"               : "lf",
-
-        "strict"                    : true,
-        "noUnusedLocals"            : true,
-        "noUnusedParameters"        : true,
-        "noImplicitReturns"         : true,
-        "noFallthroughCasesInSwitch": true
-    },
-    "exclude": [
-        "node_modules"
+    "files"     : [],
+    "references": [
+        {
+            "path": "./source"
+        },
+        {
+            "path": "./tests"
+        }
     ]
 }
