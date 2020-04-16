@@ -1,7 +1,7 @@
 export class Math {
     public Add(a: number, b: number): number {
-        if (a == Number.MAX_SAFE_INTEGER + 1 || b == Number.MAX_SAFE_INTEGER + 1)
-            throw new RangeError("Summand(s) must not be MAX_SAFE_INTEGER (or greater)");
+        //if (a === Number.MAX_SAFE_INTEGER + 1 || b === Number.MAX_SAFE_INTEGER + 1)
+        //    throw new RangeError("Summand(s) must not be MAX_SAFE_INTEGER (or greater)");
 
         return a + b;
     }
