@@ -22,7 +22,7 @@ jobs:
             - run: yarn run test-results
             - run:
                 name: test with direct output
-                command: yarn run test
+                command: yarn run test-coverage
                 when: on_fail
             - persist_to_workspace:
                 root: .

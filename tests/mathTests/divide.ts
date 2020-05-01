@@ -1,4 +1,4 @@
-import "module-alias/register";
+import "tsconfig-paths/register";
 import { Math }                                from "@source/index";
 import { TestFixture, TestCase, Test, Expect } from "alsatian";
 //-----------------------------------------------------------------------------

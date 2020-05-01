@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
-        "target"        : "ES6",
+        "target"        : "ES2015",
         "module"        : "commonjs",
-        "lib"           : [ "ES6" ],
+        "lib"           : [ "ES2015" ],
         "incremental"   : true,
         "declaration"   : true,
         "declarationMap": true,
