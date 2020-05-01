@@ -15,7 +15,7 @@
         "lint"         : "tslint ./source/*.ts",
         "test"         : "cross-env TS_NODE_PROJECT=tests/tsconfig.json alsatian tests/**/*.ts",
         "test-results" : "cross-env TS_NODE_PROJECT=tests/tsconfig.json alsatian tests/**/*.ts --tap | tap-junit -o out/tests -n test-results.xml",
-        "test-coverage": "nyc --reporter=lcov --reporter=html yarn run test && nyc report"
+        "test-coverage": "nyc --reporter=cobertura yarn run test && nyc report"
     },
     "dependencies": {
         "tslib": "^1.11.1"
