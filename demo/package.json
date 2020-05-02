@@ -15,6 +15,6 @@
         "@types/node": "^13.11.1"
     },
     "dependencies": {
-        "@gfoidl-tests/typescript-ci-test": "0.4.0-preview-2"
+        "@gfoidl-tests/typescript-ci-test": "0.6.0"
     }
 }
