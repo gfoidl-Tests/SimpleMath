@@ -10,7 +10,7 @@ export class Math_Subtract {
 	public Args_given___correct_difference(a: number, b: number, res: number): void {
 		const sut = new Math();
 
-		const actual = sut.Subtract(a, b);
+		const actual = sut.subtract(a, b);
 
 		Expect(actual).toBe(res);
 	}

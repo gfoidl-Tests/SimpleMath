@@ -9,7 +9,7 @@ export class Math_Divide {
     public Args_given___correct_quotient(a: number, b: number, res: number): void {
         const sut = new Math();
 
-        const actual = sut.Divide(a, b);
+        const actual = sut.divide(a, b);
 
         Expect(actual).toBe(res);
     }
@@ -18,6 +18,6 @@ export class Math_Divide {
     public Divisor_is_0___throws_RangeError(): void {
         const sut = new Math();
 
-        Expect(() => sut.Divide(1, 0)).toThrowError(RangeError, "Divisor must not be 0");
+        Expect(() => sut.divide(1, 0)).toThrowError(RangeError, "Divisor must not be 0");
     }
 }
