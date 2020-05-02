@@ -21,6 +21,7 @@ async function publishPackageJson(): Promise<void> {
     config.main  = path.basename(config.main);
     config.types = path.basename(config.types);
 
+    // Pulling in `color`-package is too heavy for this simple task.
     console.log("\x1b[1;32mpackage.json stitched:\x1b[0m");
     console.dir(config);
 
