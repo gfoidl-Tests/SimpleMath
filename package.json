@@ -6,8 +6,8 @@
     "types"      : "lib/index.d.ts",
     "author"     : "Günther Foidl <gue@korporal.at>",
     "license"    : "MIT",
-    "repository" : "https://github.com/gfoidl-Tests/SimpleMath",
-    "bugs"       : "https://github.com/gfoidl-Tests/SimpleMath/issues",
+    "repository" : "https://github.com/gfoidl-Tests/TypeScript-CI-Test",
+    "bugs"       : "https://github.com/gfoidl-Tests/TypeScript-CI-Test/issues",
     "scripts"    : {
         "build"        : "tsc --build source --verbose",
         "build-test"   : "tsc --build tests --verbose",
@@ -21,13 +21,16 @@
         "tslib": "^1.11.1"
     },
     "devDependencies": {
+        "@types/node"   : "^13.13.4",
         "alsatian"      : "^3.2.1",
         "cross-env"     : "^7.0.2",
         "nyc"           : "^15.0.1",
+        "jsonfile"      : "^6.0.1",
+        "tap-junit"     : "^3.1.2",
         "typescript"    : "^3.8.3",
         "tsconfig-paths": "^3.9.0",
-        "tslint"        : "^6.1.1",
-        "tap-junit"     : "^3.1.2"
+        "ts-node"       : "^8.9.1",
+        "tslint"        : "^6.1.1"
     },
     "config": {
         "allow-same-version": true,
