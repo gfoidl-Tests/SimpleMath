@@ -1,25 +1,33 @@
-import "tsconfig-paths/register";
-import { Math }                          from "@source/index";
-import { TestFixture, TestCase, Expect } from "alsatian";
+import { Math } from "@source/index";
 //-----------------------------------------------------------------------------
-@TestFixture()
-export class Math_Add {
-	@TestCase(0, 0, 0)
-	@TestCase(1, 2, 3)
-	@TestCase(2, 1, 3)
-	public Summands_given___correct_sum(a: number, b: number, res: number): void {
-		const sut = new Math();
+describe("Math.add", () => {
+    test("summands given -> correct sum", () => {
+        const sut = new Math();
 
-		const actual = sut.add(a, b);
+        const actual = sut.add(2, 1);
 
-		Expect(actual).toBe(res);
-	}
-	//-------------------------------------------------------------------------
-	@TestCase(9007199254740992, 1)
-	@TestCase(1, 9007199254740992)
-	public MaxValue_plus_1___throws_RangeError(a: number, b: number): void {
-		const sut = new Math();
+        expect(actual).toBe(3);
+    });
+    //-------------------------------------------------------------------------
+    test.each`
+        a   | b    | expected
+       ${0} | ${0} | ${0}
+       ${1} | ${2} | ${3}
+       ${2} | ${1} | ${3}
+    `("summands given -> correct sum", ({ a, b, expected }) => {
+        const sut = new Math();
 
-		Expect(() => sut.add(a, b)).toThrowError(RangeError, "Summand(s) must not be MAX_SAFE_INTEGER (or greater)");
-	}
-}
+        const actual = sut.add(a, b);
+
+        expect(actual).toBe(expected);
+    });
+    //-------------------------------------------------------------------------
+    test.each([
+        [9007199254740992, 1],
+        [1, 9007199254740992]
+    ])("MaxValue + 1 -> throws RangeError", (a, b) => {
+        const sut = new Math();
+
+        expect(() => sut.add(a, b)).toThrowError(RangeError);
+    });
+});

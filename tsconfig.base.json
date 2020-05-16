@@ -13,6 +13,7 @@
         "experimentalDecorators": true,
         "sourceMap"             : true,
         "newLine"               : "lf",
+        "skipLibCheck"          : true,
 
         "strict"                    : true,
         "noFallthroughCasesInSwitch": true,
