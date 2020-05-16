@@ -2,11 +2,6 @@
 node_modules
 npm-debug.log*
 
-# TypeScript
-*.js
-*.map
-*.d.ts
-
 # Misc
 /.vs
 tsconfig.tsbuildinfo
@@ -15,3 +10,4 @@ tsconfig.tsbuildinfo
 /.nyc_output
 /coverage
 /doc
+/junit.xml
