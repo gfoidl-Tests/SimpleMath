@@ -17,9 +17,12 @@ async function publishPackageJson(): Promise<void> {
     delete config.scripts;
     delete config.devDependencies;
     delete config.config;
+    delete config.files;
 
-    config.main  = path.basename(config.main);
-    config.types = path.basename(config.types);
+    config.main   = "cjs/" + path.basename(config.main);
+    config.module = "esm/" + path.basename(config.module);
+    // config.types not needed by typescript if the entry is index.js and index.d.ts
+    //config.types = path.basename(config.types);
 
     // Pulling in `color`-package is too heavy for this simple task.
     console.log("\x1b[1;32mpackage.json stitched:\x1b[0m");

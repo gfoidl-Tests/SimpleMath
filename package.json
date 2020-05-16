@@ -2,14 +2,15 @@
     "name"       : "@gfoidl-tests/typescript-ci-test",
     "version"    : "0.2.0-preview-1",
     "description": "Simple Math-Class (for TypeScript CI testing)",
-    "main"       : "lib/index.js",
-    "types"      : "lib/index.d.ts",
+    "main"       : "lib/cjs/index.js",
+    "module"     : "lib/esm/index.js",
     "author"     : "Günther Foidl <gue@korporal.at>",
     "license"    : "MIT",
     "repository" : "https://github.com/gfoidl-Tests/TypeScript-CI-Test",
     "bugs"       : "https://github.com/gfoidl-Tests/TypeScript-CI-Test/issues",
     "scripts"    : {
         "build"        : "tsc --build source --verbose",
+        "build-esm"    : "tsc --project source/tsconfig.esm.json",
         "build-test"   : "tsc --build tests --verbose",
         "clean"        : "tsc --build --clean",
         "lint"         : "tslint ./source/*.ts",
@@ -37,5 +38,8 @@
     "config": {
         "allow-same-version": true,
         "git-tag-version"   : false
-    }
+    },
+    "files": [
+        "lib"
+    ]
 }
