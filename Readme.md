@@ -4,3 +4,10 @@
 
 Demo for TypeScript npm-Module with unit-tests.	 
 For me a playground, nothing more nothing less.
+
+```ts
+import { Math } from "@gfoidl-tests/typescript-ci-test";
+
+const math = new Math();
+const sum  = math.add(3, 4);
+```

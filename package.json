@@ -20,7 +20,7 @@
         "alsatian-test"         : "cross-env TS_NODE_PROJECT=tests-alsatian/tsconfig.json alsatian tests-alsatian/**/*.ts",
         "alsatian-test-results" : "cross-env TS_NODE_PROJECT=tests-alsatian/tsconfig.json alsatian tests-alsatian/**/*.ts --tap | tap-junit -o out/tests-alsatian -n test-results.xml",
         "alsatian-test-coverage": "nyc --reporter=cobertura yarn run alsatian-test && nyc report",
-        "doc-create"            : "typedoc --out doc source"
+        "doc-create"            : "typedoc --out doc --excludePrivate source"
     },
     "dependencies": {
         "tslib": "^1.11.1"

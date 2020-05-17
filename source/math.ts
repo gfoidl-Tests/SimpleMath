@@ -2,7 +2,15 @@
  * Provides elementary math operations.
  *
  * @remarks
- * It is very simple, as it's just a demo.
+ * It is very simple, as it's just a demo.  
+ *
+ * Code sample:
+ * ```ts
+ * import { Math } from "@gfoidl-tests/typescript-ci-test";
+ * 
+ * const math = new Math();
+ * const sum  = math.add(3, 4);
+ * ```
  */
 export class Math {
     /**
