@@ -16,7 +16,7 @@
         "clean"                 : "tsc --build --clean && tsc --build source/tsconfig.esm.json --clean",
         "lint"                  : "tslint ./source/*.ts",
         "test"                  : "jest",
-        "test-coverage"         : "jest --reporters=default --reporters=jest-junit --coverage",
+        "test-coverage"         : "jest --verbose --reporters=default --reporters=jest-junit --coverage",
         "alsatian-test"         : "cross-env TS_NODE_PROJECT=tests-alsatian/tsconfig.json alsatian tests-alsatian/**/*.ts",
         "alsatian-test-results" : "cross-env TS_NODE_PROJECT=tests-alsatian/tsconfig.json alsatian tests-alsatian/**/*.ts --tap | tap-junit -o out/tests-alsatian -n test-results.xml",
         "alsatian-test-coverage": "nyc --reporter=cobertura yarn run alsatian-test && nyc report",
